@@ -1,0 +1,18 @@
+{
+  "name": "exam_e2e_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+
+	"test-e2e": "playwright test --reporter=list"
+  },
+  "keywords": [],
+  "author": "Antonina",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1"
+  }
+}
