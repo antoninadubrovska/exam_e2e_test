@@ -26,3 +26,17 @@ await expect(
   page.getByTestId('add-submit')
 	).toBeEnabled();
 });
+
+//  can add a new book and see it in catalog
+test('can add a new book', async ({ page }) => {
+	await page.getByTestId('add-input-title').fill('Dune');
+	await page.getByTestId('add-input-author').fill('Frank Herbert');
+
+	await page.getByTestId('add-submit').click();
+
+	await page.getByTestId('catalog').click();
+
+	await expect(
+	  page.getByText('"Dune", Frank Herbert')
+	).toBeVisible();
+  });
