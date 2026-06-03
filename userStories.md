@@ -1,4 +1,6 @@
-Navigation
+
+
+# Navigation
 
 User Story 1
 As a user, I want to navigate to the Katalog page so that I can see available books.
@@ -12,7 +14,9 @@ As a user, I want to navigate to the Mina Böcker page so that I can see my favo
 User Story 4
 As a user, I want to navigate to the Statistik page so that I can view statistics about my books.
 
-Katalog / Catalog
+
+
+# Katalog / Catalog
 
 User Story 5
 As a user, I want to mark a book as favorite so that I can save it in favorites.
@@ -20,7 +24,9 @@ As a user, I want to mark a book as favorite so that I can save it in favorites.
 User Story 6
 As a user, I would like to remove a book from my favorites so that I can update my list when I change my mind.
 
-Lägg till bok / Add Book
+
+
+# Lägg till bok / Add Book
 
 User Story 7
 As a user, I want to add a new book by entering title and author so that I can store it in my collection.
@@ -31,7 +37,9 @@ As a user, I would like to be prevented from adding a book when required fields 
 User Story 9
 As a user, I would like to see Lägg till ny bok button disabled when any required field is empty so that I get clear feedback on what I need to complete.
 
-Mina Böcker / Favorites
+
+
+# Mina Böcker / Favorites
 
 User Story 10
 As a user, I want my favorited books to appear in the favorites list in a list so that I can easily access them.
