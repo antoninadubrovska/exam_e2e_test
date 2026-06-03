@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 
 const book = "Agile Is a Feeling";
 
-test.describe('Favorites', () => {
+test.describe("Favorites", () => {
 	test.beforeEach(async ({ page }) => {
 		await page.goto("https://ha-fed25-testning.github.io/exam_e2e/");
 	});
@@ -16,9 +16,7 @@ test.describe('Favorites', () => {
 
 		await page.getByTestId("favorites").click();
 
-		await expect(
-			page.getByTestId(`fav-${book}`),
-		).toBeVisible();
+		await expect(page.getByTestId(`fav-${book}`)).toBeVisible();
 
 		await expect(page.getByText("När du valt")).not.toBeVisible();
 	});
@@ -37,7 +35,6 @@ test.describe('Favorites', () => {
 		await page.getByTestId(`star-${book}`).click();
 
 		await page.getByTestId("favorites").click();
-
 
 		await expect(page.getByTestId(`fav-${book}`)).not.toBeVisible();
 

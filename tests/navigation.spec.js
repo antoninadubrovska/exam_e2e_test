@@ -1,53 +1,42 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from "@playwright/test";
 
-test.describe('Navigation', () => {
-
+test.describe("Navigation", () => {
 	test.beforeEach(async ({ page }) => {
-		await page.goto('https://ha-fed25-testning.github.io/exam_e2e/');
+		await page.goto("https://ha-fed25-testning.github.io/exam_e2e/");
 	});
 
 	// Katalog / Catalog
-	test('navigate back to catalog page', async ({ page }) => {
-		await page.getByTestId('favorites').click();
-		await page.getByTestId('catalog').click();
+	test("navigate back to catalog page", async ({ page }) => {
+		await page.getByTestId("favorites").click();
+		await page.getByTestId("catalog").click();
 
-		await expect(page.locator('.catalog')).toBeVisible();
+		await expect(page.locator(".catalog")).toBeVisible();
 	});
 
 	// Lägg till bok / Add Book
-	test('navigate to add book page', async ({ page }) => {
+	test("navigate to add book page", async ({ page }) => {
+		await page.getByTestId("add-book").click();
 
-		await page.getByTestId('add-book').click();
-
-		await expect(
-			page.getByTestId('add-input-title')
-		).toBeVisible();
+		await expect(page.getByTestId("add-input-title")).toBeVisible();
 	});
 
 	// Mina Böcker / Favorites
-	test('navigate to favorites page', async ({ page }) => {
+	test("navigate to favorites page", async ({ page }) => {
+		await page.getByTestId("favorites").click();
 
-		await page.getByTestId('favorites').click();
-
-		await expect(
-			page.locator('.favorites')
-		).toBeVisible();
+		await expect(page.locator(".favorites")).toBeVisible();
 	});
 
 	// Statistik / Statistics
-	test('navigate statistics page', async ({ page }) => {
+	test("navigate statistics page", async ({ page }) => {
+		await page.getByTestId("statistics").click();
 
-		await page.getByTestId('statistics').click();
-
-		await expect(
-			page.locator('.stats')
-		).toBeVisible();
+		await expect(page.locator(".stats")).toBeVisible();
 	});
 });
 
-  //  Katalog - state test
-test('catalog page is visible on load', async ({ page }) => {
-	await page.goto('https://ha-fed25-testning.github.io/exam_e2e/');
-	  await expect(page.locator('.catalog')).toBeVisible();
-  });
-
+//  Katalog - state test
+test("catalog page is visible on load", async ({ page }) => {
+	await page.goto("https://ha-fed25-testning.github.io/exam_e2e/");
+	await expect(page.locator(".catalog")).toBeVisible();
+});

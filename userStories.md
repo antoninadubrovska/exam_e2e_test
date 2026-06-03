@@ -46,3 +46,14 @@ As a user, I want my favorited books to appear in the favorites list in a list s
 
 User Story 11
 As a user, I would like to see an empty-state message when I have no favorite books so that I understand that my list is currently empty.
+
+
+# Stats
+
+User Story 12
+
+As a user, I want to see the total number of books so I understand how large the catalog is.
+
+User Story 13
+
+As a user, I want statistics to update when I add or remove favorites so the information stays accurate.
