@@ -5,6 +5,8 @@ async function fillBookForm(page, title, author) {
 	await page.getByTestId("add-input-author").fill(author);
 }
 
+// User Story 7 - 9
+
 test.describe("Add Book", () => {
 	test.beforeEach(async ({ page }) => {
 		await page.goto("https://ha-fed25-testning.github.io/exam_e2e/");

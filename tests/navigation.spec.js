@@ -1,5 +1,7 @@
 import { test, expect } from "@playwright/test";
 
+// User Story 1 - 4
+
 test.describe("Navigation", () => {
 	test.beforeEach(async ({ page }) => {
 		await page.goto("https://ha-fed25-testning.github.io/exam_e2e/");

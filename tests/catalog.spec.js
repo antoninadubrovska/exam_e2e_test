@@ -2,6 +2,8 @@ import { test, expect } from "@playwright/test";
 
 const book = "Agile Is a Feeling";
 
+// User Story 5, 6
+
 test.describe("Catalog", () => {
 	test.beforeEach(async ({ page }) => {
 		await page.goto("https://ha-fed25-testning.github.io/exam_e2e/");

@@ -45,7 +45,7 @@ User Story 10
 As a user, I want my favorited books to appear in the favorites list in a list so that I can easily access them.
 
 User Story 11
-As a user, I would like to see an empty-state message when I have no favorite books so that I understand that my list is currently empty.
+As a user, I would like to see an empty-state message when I have no favorite books so that I understand that the list is currently empty.
 
 
 # Stats

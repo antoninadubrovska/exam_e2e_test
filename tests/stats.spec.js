@@ -22,6 +22,8 @@ function extractNumber(text) {
 	return match ? Number(match[0]) : 0;
 }
 
+// User Story 12, 13
+
 test.describe("Statistics", () => {
 	test.beforeEach(async ({ page }) => {
 		await page.goto("https://ha-fed25-testning.github.io/exam_e2e/");
@@ -43,7 +45,7 @@ test.describe("Statistics", () => {
 		// go back to catalog so another new book can be added
 		await page.getByTestId("catalog").click();
 
-		// add (2) new book
+		// add (2) another new book
 		await addBook(page, book2, "Addy Osmani");
 
 		// go back to catalog
@@ -62,7 +64,7 @@ test.describe("Statistics", () => {
 		const afterText = await page.getByTestId("book-count").textContent();
 		const afterCount = extractNumber(afterText);
 
-		// assertion after adding new book
+		// assertion after adding two new books
 		expect(afterCount).toBe(beforeCount + 2);
 
 		await expect(page.getByTestId("stars-count")).toContainText("2");
